@@ -1,0 +1,460 @@
+/* этот код до пропуска строки
+CSS reset от всемирно известного Эрика Мейера, сбрасывающий стандартные настройки браузеров
+https://www.stijit.com/html-css/css-reset-erika-meyera */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+header {
+  z-index: 900;
+  position: absolute;
+}
+.container {
+  width: 93%;
+  position: fixed;
+  margin-bottom: 20px;
+  /*border: 2px solid #ccc;*/
+}
+nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#first {
+  width: 100px;
+  margin: 4px 5px 0;
+}
+.second {
+  width: 22px;
+}
+.hight_first {
+  margin-bottom: 120px;
+}
+.hight_second {
+  padding: 40px 0 0 0;
+}
+.hight_third {
+  padding-top: 36px;
+}
+nav > ul {
+  width: 103px;
+  /*border: 2px solid #ccc;*/
+}
+header p {
+  position: relative;
+  /*border: 2px solid #ccc;*/
+  margin: -20px 0 0 30px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Segoe Script;
+  transition: .65s ease-in-out;
+  /*border: 2px solid #ccc;*/
+}
+nav a:hover {
+  color: #CF524F;
+}
+.submenu {
+  text-align: center;
+  margin: 32px 0 0 -36px;
+/* в данном случае 'opacity' обеспечивает плавное исчезновение и появление текста */
+  opacity: 0; /* от 0(прозрачный); 0.1... 1(непрозрачный) */
+  z-index: 4; /* любое число */
+  width: 200px;
+/* 'transform-origin' - устанавливает координаты точки, относительно которой будет происходить трансформация элемента */
+  transform-origin: 0% 0%; /* x и y */
+/* в данном случае 'transition' обеспечивает плавное исчезновение и появление (блока) с текстом (в секундах) */
+  transition: .65s ease-in-out; /* 'ease-in-out' - более медленное появление и исчезновение */
+}
+/* '>' - форматирует части целого не вместе, а каждый поотдельности */
+/* ':hover' - стиль элемента после ховера при наведении на этот эелемент мышкой */
+nav > :hover .submenu{ 
+  opacity: 1;
+}
+/* а здесь все элементы 'a' форматируются вместе */
+.submenu li a {
+  display: block;
+  font-size: 13px;
+  line-height: 40px; /* межстрочный интервал снизу у всплывающего списка */ 
+  font-family: Segoe Script;
+}
+
+.global_text_zero {
+  position: absolute;
+  width: 100%;
+  margin: 245px 0 0 0;
+}
+.gl_t_one {
+  padding: 40px 0 0 0;
+  color: white;
+  text-align: center;
+  font-size: 90px;
+  font-family: 'Arizonia';
+  /*border: 2px solid #ccc;*/
+}
+.gl_t_two {
+  color: white;
+  text-align: center;
+  font-size: 70px;
+  font-family: 'Arizonia';
+  /*border: 2px solid #ccc;*/
+}
+.video {
+  margin: 0 0 0 0;
+  width: 100%;  
+}
+.container_second {
+  z-index: 400;
+  width: 100%;
+  background-color: #111418;
+  margin: -65px 0 0 0;
+}
+.cont_one {
+  width: 100%;
+}
+.one {
+  width: 100%;
+  opacity: .1;
+
+}
+.subcont_one {
+  width: 100%;
+  position: absolute;
+  z-index: 401;
+  text-align: center;
+  margin: 160px 0 0 0;
+}
+.text_first {
+  color: #CF524F;
+  font-size: 46px;
+  font-family: Segoe Script;
+  /*border: 2px solid #ccc;*/
+}
+.text_second {
+  margin: 0 200px 0 200px;
+  color: #b8b8b8;  
+  font-size: 30px;
+  font-family: Segoe Script;
+  /*border: 2px solid #ccc;*/  
+}
+.tx_three {
+  margin: 30px 290px 0 290px;
+  color: white;
+  font-size: 15px;
+  font-family: Segoe Script;
+  line-height: 30px;
+}
+.fix {
+  margin: 80px 0 0 0;
+}
+.subsubcont {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0 0 0;
+}
+.buttons_container_zero {
+  position: absolute;
+}
+.buttons_container_zero button{
+  font-size: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  border-top: white solid 1px;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  font-family: 'GFYMichaelW00-Reg';
+  padding: 10px 20px;
+  width: 350px;
+  height: 50px;
+  transition: .25s ease-in-out;
+}
+
+.buttons_container_zero button:hover {
+  opacity: 0.3;*/
+  border-color: #fff;
+  font-size: 16px;
+  color: white;
+  /*background-color: #CF524F;*/
+  background: linear-gradient(#000000 0%, rgba(255, 0, 46, 0.552083) 71.88%, rgba(255, 255, 255, 0) 100%);*/
+  /*background: linear-gradient(#6100FF 0%, rgba(255, 134, 170, 0.49) 84.9%, rgba(255, 255, 255, 0) 100%);*/
+}
+.foto_zero {
+  width: 800px;
+  position: absolute;
+  transition: .65s ease-in-out;
+}
+.foto_zero:hover {
+  filter: brightness(40%);
+}
+.ft {
+  position: sticky;
+  top: 0;
+}
+.text_ten {
+  margin: 460px 0 0 0;
+  width: 100%;
+  position: sticky;
+  top: 0;
+}
+.two {
+  width: 100%;
+}
+.fix_zero {
+  margin: 520px 0 0 0;
+  z-index: 450;
+}
+.text_fix {
+  color: white;
+}
+.color {
+  margin: 460px 0 0 0;
+  background: linear-gradient(rgba(17,20,24,1) 0%, rgba(17,20,24,0.9136029411764706) 24%, rgba(17,20,24,0.896796218487395) 64%);
+  width: 100%;
+  z-index: 402;
+  height: 170.7%;
+  position: absolute;
+  /*border: 2px solid #ccc;*/ 
+}
+.text_fix_two {
+  margin-left: 264px;
+  margin-right:264px;
+}
+.foto_fix {
+  margin-top: 10px;
+}
+.zero {
+  width: 100%;
+  height: 5px;
+  background-color: #111418;
+  position: relative;
+  /*margin-top: 425px;*/
+  margin-top: 1400px;
+}
+
+.text_fifteenth {
+  position: relative;
+  z-index: 480;
+  display: flex;
+  justify-content: space-around;
+  margin-top: -975px;
+}
+.foto_fourth {
+  object-fit: cover;
+  height: 350px;
+  width: 665px;
+  filter: brightness(40%);
+  margin-bottom: 5px;
+}
+.foto_fifth {
+  object-fit: cover;
+  height: 350px;
+  width: 665px;
+  filter: brightness(40%);
+  margin-bottom: 5px;
+}
+.container_zero_zero_two {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  background-color: #111418;
+  opacity: 0.8;
+}
+.text_fifteenth p {
+  color: #b8b8b8;
+  position: absolute;
+  font-size: 40px;
+  font-family: 'GFYMichaelW00-Reg';
+}
+.seventh {
+  margin: 28px 680px 0 0;
+}
+.eighth {
+  margin: 28px 0 0 694px;
+}
+.buttons_container {
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+}
+.nine {
+  margin: 186px 160px 0 0;
+}
+.ten {
+  margin: 186px 0 0 160px;
+}
+.buttons_container button{
+  font-size: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  border-top: white solid 1px;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  font-family: 'GFYMichaelW00-Reg';
+  padding: 10px 20px;
+  width: 390px;
+  height: 50px;
+  transition: .25s ease-in-out;
+}
+.buttons_container button:hover {
+  opacity: 0.3;*/
+  border-color: #fff;
+  font-size: 16px;
+  color: white;
+  /*background-color: #CF524F;*/
+  /*background: linear-gradient(#FF0000 0%, rgba(255, 207, 134, 0.552083) 71.88%, rgba(255, 255, 255, 0) 100%);*/
+  background: linear-gradient(#6100FF 0%, rgba(255, 134, 170, 0.49) 84.9%, rgba(255, 255, 255, 0) 100%);*/
+}
+
+.text_four {
+  width: 750px;
+  position: absolute;
+  z-index: 500;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 60px;
+  /*border: 2px solid #ccc;*/ 
+}
+.autofix {
+  text-align: center;
+  margin: 40px 90px 0 90px;
+  color: white;
+  font-size: 15px;
+  font-family: Segoe Script;
+  line-height: 30px;
+}
+.autofix_two {
+  object-fit: cover;
+  width: 485px;
+  height: 450px;
+  margin-top: 40px;
+  transition: .65s ease-in-out;
+}
+.autofix_two:hover {
+  filter: brightness(40%);
+}
+
+.text_sixteenth {
+  position: relative;
+  z-index: 480;
+  overflow: hidden;
+}
+.foto_ninth {
+  height: 100%;
+  width: 100%;
+  filter: brightness(40%);
+  margin-left: 362px;
+  margin-top: 2px;
+}
+.color_two {
+  margin: 2px 0 0 0;
+  background: linear-gradient(90deg, rgba(17,20,24,1) 0%, rgba(17,20,24,1) 28%, rgba(17,20,24,1) 51%, rgba(17,20,24,0.5298494397759104) 57%);
+  width: 100%;
+  z-index: 490;
+  height: 109.5%;
+  position: absolute;
+  /*border: 2px solid #ccc;*/ 
+}
+.fixcont {
+  margin-top: 36px;
+}
+
+
+
+
+.container_zero_two {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 330px;
+  background-color: black;
+  border-bottom: 1px solid #ccc;
+  font-family: Segoe Script;
+  text-align: center;
+  line-height: 30px;
+}
+.zero_zero_foto {
+  z-index: 405;
+  margin: 16px 0 0 0;
+  /*border: 2px solid #ccc;*/ 
+}
+.container_zero_two ul p {
+  font-size: 16px;
+  color: white;
+}
+.container_zero_two ul li {
+  font-size: 14px;
+  color: #b8b8b8;
+}
+.foto_zero_zero_two {
+  position: absolute;
+  margin: 6px 40px 0 0;
+}
+.foto_zero_two {
+  position: absolute;
+  margin-top: 156px;
+  filter: brightness(30%);
+}
+.foto_zero_two_one {
+  width: 24px;
+  margin: 146px 95px 0 0;
+}
+.foto_zero_two_two {
+  width: 22px;
+  border-radius: 6px;
+}
+.foto_zero_two_three {
+  width: 28px;
+  margin: 158px 0 0 115px;
+}
+.zero_zero_two_foto {
+  position: absolute;
+  margin: 215px 0 0 0;
+  /*border: 2px solid #ccc;*/ 
+}
