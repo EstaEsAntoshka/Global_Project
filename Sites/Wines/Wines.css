@@ -1,0 +1,250 @@
+/* этот код до пропуска строки
+CSS reset от всемирно известного Эрика Мейера, сбрасывающий стандартные настройки браузеров
+https://www.stijit.com/html-css/css-reset-erika-meyera */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+header {
+  z-index: 900;
+  position: absolute;
+}
+.container_zero {
+  position: fixed;
+  width: 100%;
+  height: 88px;
+  background-color: #111418;
+  box-shadow: 0 9px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.container {
+  width: 93%;
+  position: fixed;
+  margin-bottom: 20px;
+  /*border: 2px solid #ccc;*/
+}
+nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#first {
+  width: 80px;
+  margin: 4px 5px 0;
+}
+.second {
+  width: 22px;
+}
+.hight_first {
+  margin-bottom: 120px;
+}
+.hight_second {
+  padding: 40px 0 0 0;
+}
+.hight_third {
+  padding-top: 36px;
+}
+nav > ul {
+  width: 103px;
+  /*border: 2px solid #ccc;*/
+}
+header p {
+  position: relative;
+  /*border: 2px solid #ccc;*/
+  margin: -20px 0 0 30px;
+}
+nav a {
+  color: #b8b8b8;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Segoe Script;
+  transition: .65s ease-in-out;
+  /*border: 2px solid #ccc;*/
+}
+nav a:hover {
+  color: #CF524F;
+}
+.submenu {
+  text-align: center;
+  background-color: #111418;
+  margin: 32px 0 0 -36px;
+/* в данном случае 'opacity' обеспечивает плавное исчезновение и появление текста */
+  opacity: 0; /* от 0(прозрачный); 0.1... 1(непрозрачный) */
+  z-index: 4; /* любое число */
+  width: 200px;
+/* 'transform-origin' - устанавливает координаты точки, относительно которой будет происходить трансформация элемента */
+  transform-origin: 0% 0%; /* x и y */
+/* в данном случае 'transition' обеспечивает плавное исчезновение и появление (блока) с текстом (в секундах) */
+  transition: .65s ease-in-out; /* 'ease-in-out' - более медленное появление и исчезновение */
+}
+/* '>' - форматирует части целого не вместе, а каждый поотдельности */
+/* ':hover' - стиль элемента после ховера при наведении на этот эелемент мышкой */
+nav > :hover .submenu{ 
+  opacity: 1;
+}
+/* а здесь все элементы 'a' форматируются вместе */
+.submenu li a {
+  display: block;
+  font-size: 13px;
+  line-height: 40px; /* межстрочный интервал снизу у всплывающего списка */ 
+  font-family: Segoe Script;
+}
+
+.ig {
+  margin: -55px 0 0 0;
+  width: 100%;  
+}
+.container_second {
+  position: sticky;
+  top: 0;
+  z-index: 400;
+  width: 100%;
+  background-color: #111418;
+  margin: -148px 0 0 0;
+}
+.text_first {
+  padding: 40px 0 0 0;
+  color: #b8b8b8;
+  text-align: center;
+  font-size: 40px;
+  font-family: Segoe Script;
+  /*border: 2px solid #ccc;*/
+}
+.text_second {
+  padding: 6px 0 0 0;
+  color: #CF524F;
+  text-align: center;
+  font-size: 20px;
+  font-family: Segoe Script;
+  /*border: 2px solid #ccc;*/  
+}
+.fix {
+  font-size: 30px;
+  padding-top: 60px;
+  border-bottom: 1px solid #4f4f4f;
+  margin-left: 70px;
+  margin-right: 70px;
+}
+
+.foto_zero {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 25px 0 0 0;
+  padding-bottom: 10px;
+  /*border: 2px solid #ccc;*/
+}
+.foto_zero img {
+  padding-bottom: 10px;
+  transition: .65s ease-in-out;
+}
+.foto_zero img:hover {
+  filter: brightness(40%);
+}
+.fix_zero {
+  width: 440px;
+}
+.fix_one {
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 440px;
+}
+.line {
+  width: 10px;
+  height: 20px;
+}
+.fix_two {
+  width: 327.5px;
+}
+
+.container_zero_two {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 330px;
+  background-color: black;
+  border-bottom: 1px solid #ccc;
+  font-family: Segoe Script;
+  text-align: center;
+  line-height: 30px;
+}
+.zero_zero_foto {
+  z-index: 405;
+  margin: 16px 0 0 0;
+  /*border: 2px solid #ccc;*/ 
+}
+.container_zero_two ul p {
+  font-size: 16px;
+  color: white;
+}
+.container_zero_two ul li {
+  font-size: 14px;
+  color: #b8b8b8;
+}
+.foto_zero_zero_two {
+  position: absolute;
+  margin: 6px 40px 0 0;
+}
+.foto_zero_two {
+  position: absolute;
+  margin-top: 156px;
+  filter: brightness(30%);
+}
+.foto_zero_two_one {
+  width: 24px;
+  margin: 146px 95px 0 0;
+}
+.foto_zero_two_two {
+  width: 22px;
+  border-radius: 6px;
+}
+.foto_zero_two_three {
+  width: 28px;
+  margin: 158px 0 0 115px;
+}
+.zero_zero_two_foto {
+  position: absolute;
+  margin: 215px 0 0 0;
+  /*border: 2px solid #ccc;*/ 
+}
