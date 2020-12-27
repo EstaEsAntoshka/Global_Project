@@ -1,0 +1,377 @@
+/* этот код до пропуска строки
+CSS reset от всемирно известного Эрика Мейера, сбрасывающий стандартные настройки браузеров
+https://www.stijit.com/html-css/css-reset-erika-meyera */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+header {
+  z-index: 900;
+  position: absolute;
+}
+.container_zero {
+  position: fixed;
+  width: 100%;
+  height: 88px;
+  background-color: #111418;
+  box-shadow: 0 9px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.container {
+  width: 93%;
+  position: fixed;
+  margin-bottom: 20px;
+  /*border: 2px solid #ccc;*/
+}
+nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#first {
+  width: 80px;
+  margin: 4px 5px 0;
+}
+.second {
+  width: 22px;
+}
+.hight_first {
+  margin-bottom: 120px;
+}
+.hight_second {
+  padding: 40px 0 0 0;
+}
+.hight_third {
+  padding-top: 36px;
+}
+nav > ul {
+  width: 103px;
+  /*border: 2px solid #ccc;*/
+}
+header p {
+  position: relative;
+  /*border: 2px solid #ccc;*/
+  margin: -20px 0 0 30px;
+}
+nav a {
+  color: #b8b8b8;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Segoe Script;
+  transition: .65s ease-in-out;
+  /*border: 2px solid #ccc;*/
+}
+nav a:hover {
+  color: #CF524F;
+}
+.submenu {
+  text-align: center;
+  background-color: #111418;
+  margin: 32px 0 0 -36px;
+/* в данном случае 'opacity' обеспечивает плавное исчезновение и появление текста */
+  opacity: 0; /* от 0(прозрачный); 0.1... 1(непрозрачный) */
+  z-index: 4; /* любое число */
+  width: 200px;
+/* 'transform-origin' - устанавливает координаты точки, относительно которой будет происходить трансформация элемента */
+  transform-origin: 0% 0%; /* x и y */
+/* в данном случае 'transition' обеспечивает плавное исчезновение и появление (блока) с текстом (в секундах) */
+  transition: .65s ease-in-out; /* 'ease-in-out' - более медленное появление и исчезновение */
+}
+/* '>' - форматирует части целого не вместе, а каждый поотдельности */
+/* ':hover' - стиль элемента после ховера при наведении на этот эелемент мышкой */
+nav > :hover .submenu{ 
+  opacity: 1;
+}
+/* а здесь все элементы 'a' форматируются вместе */
+.submenu li a {
+  display: block;
+  font-size: 13px;
+  line-height: 40px; /* межстрочный интервал снизу у всплывающего списка */ 
+  font-family: Segoe Script;
+}
+
+.video {
+  margin: 25px 0 0 0;
+  width: 100%;  
+}
+.container_second {
+  position: sticky;
+  top: 0;
+  z-index: 400;
+  width: 100%;
+  background-color: #111418;
+  margin: -148px 0 0 0;
+}
+.text_first {
+  padding: 40px 0 0 0;
+  color: #b8b8b8;
+  text-align: center;
+  font-size: 40px;
+  font-family: Segoe Script;
+  /*border: 2px solid #ccc;*/
+}
+.text_second {
+  padding: 6px 0 0 0;
+  color: #CF524F;
+  text-align: center;
+  font-size: 20px;
+  font-family: Segoe Script;
+  /*border: 2px solid #ccc;*/  
+}
+.text_ten {
+  display: flex;
+  justify-content: space-around;
+}
+.text_third {
+  width: 420px;
+  color: #b8b8b8;
+  font-size: 15px;
+  font-family: Segoe Script;
+  /*border: 2px solid #ccc;*/  
+}
+.third {
+  margin: 40px 0 0 215px;
+  line-height: 30px;
+}
+.fourth {
+  margin: 40px 215px 0 0;
+  line-height: 30px;
+}
+.text_eleven {
+  display: flex;
+  justify-content: center;
+  /*border: 2px solid #ccc;*/ 
+}
+.foto {
+  width: 910px;
+  filter: brightness(40%);
+  margin: 46px 0 0 0;
+}
+.text_fourth {
+  position: absolute;
+  width: 840px;
+  color: white;
+  font-size: 15px;
+  font-family: Segoe Script;
+}
+.fifth {
+  margin: 155px 0 0 20px;
+  line-height: 28px;
+}
+.text_tvelwe {
+  display: flex;
+  justify-content: space-around;
+  /*border: 2px solid #ccc;*/ 
+}
+.foto_second {
+  width: 288px;
+  margin: 68px 0 0 0;
+  transition: .65s ease-in-out;
+}
+.sixth {
+  margin-left: 225px;
+}
+.eleventh {
+  margin-right: 225px;
+}
+.text_tvelwe img:hover {
+  filter: brightness(40%);
+}
+.text_thirteen {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-family: Segoe Script;
+  line-height: 30px;
+  /*border: 2px solid #ccc;*/ 
+}
+.foto_third {
+  width: 100%;
+  filter: brightness(40%);
+  margin: 20px 0 0 0;
+}
+.text_fifth {
+  position: absolute;
+  font-size: 40px;
+  margin: 200px 0 0 0;
+}
+.text_sixth {
+  position: absolute;
+  font-size: 20px;
+  margin: 240px 100px 0 100px;
+}
+.text_fourteen {
+  display: flex;
+  text-align: center;
+  color: #b8b8b8;
+  margin: 55px 220px 0 220px;
+  font-size: 26px;
+  font-family: 'GFYMichaelW00-Reg';
+  line-height: 35px;
+  /*border: 2px solid #ccc;*/ 
+}
+.text_fifteenth {
+  display: flex;
+  justify-content: space-around;
+  margin: 82px 0 0 0;
+}
+.foto_fourth {
+  object-fit: cover;
+  height: 350px;
+  width: 665px;
+  filter: brightness(40%);
+  margin-bottom: 5px;
+}
+.foto_fifth {
+  object-fit: cover;
+  height: 350px;
+  width: 665px;
+  filter: brightness(40%);
+  margin-bottom: 5px;
+}
+.container_zero_zero_two {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  background-color: #111418;
+  opacity: 0.8;
+}
+.text_fifteenth p {
+  color: #b8b8b8;
+  position: absolute;
+  font-size: 40px;
+  font-family: 'GFYMichaelW00-Reg';
+}
+.seventh {
+  margin: 28px 680px 0 0;
+}
+.eighth {
+  margin: 28px 0 0 694px;
+}
+.buttons_container {
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+}
+.nine {
+  margin: 186px 160px 0 0;
+}
+.ten {
+  margin: 186px 0 0 160px;
+}
+.buttons_container button{
+  font-size: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  border-top: white solid 1px;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  font-family: 'GFYMichaelW00-Reg';
+  padding: 10px 20px;
+  width: 350px;
+  height: 50px;
+  transition: .25s ease-in-out;
+}
+
+.buttons_container button:hover {
+  opacity: 0.3;*/
+  border-color: #fff;
+  font-size: 16px;
+  color: white;
+  /*background-color: #CF524F;*/
+  /*background: linear-gradient(#FF0000 0%, rgba(255, 207, 134, 0.552083) 71.88%, rgba(255, 255, 255, 0) 100%);*/
+  background: linear-gradient(#6100FF 0%, rgba(255, 134, 170, 0.49) 84.9%, rgba(255, 255, 255, 0) 100%);*/
+}
+.container_zero_two {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 330px;
+  background-color: black;
+  border-bottom: 1px solid #ccc;
+  font-family: Segoe Script;
+  text-align: center;
+  line-height: 30px;
+}
+.zero_zero_foto {
+  z-index: 405;
+  margin: 16px 0 0 0;
+  /*border: 2px solid #ccc;*/ 
+}
+.container_zero_two ul p {
+  font-size: 16px;
+  color: white;
+}
+.container_zero_two ul li {
+  font-size: 14px;
+  color: #b8b8b8;
+}
+.foto_zero_zero_two {
+  position: absolute;
+  margin: 6px 40px 0 0;
+}
+.foto_zero_two {
+  position: absolute;
+  margin-top: 156px;
+  filter: brightness(30%);
+}
+.foto_zero_two_one {
+  width: 24px;
+  margin: 146px 95px 0 0;
+}
+.foto_zero_two_two {
+  width: 22px;
+  border-radius: 6px;
+}
+.foto_zero_two_three {
+  width: 28px;
+  margin: 158px 0 0 115px;
+}
+.zero_zero_two_foto {
+  position: absolute;
+  margin: 215px 0 0 0;
+  /*border: 2px solid #ccc;*/ 
+}
